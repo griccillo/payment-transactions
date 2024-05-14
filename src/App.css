@@ -1,38 +1,72 @@
+/* Color Palette */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --text-color: #333;
+  --error-color: #e74c3c;
+}
+
+/* App Container */
 .App {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+h1 {
   text-align: center;
+  color: var(--primary-color);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Error Message */
+.error {
+  color: var(--error-color);
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Filters Container */
+.filters {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Filter Labels */
+.filters label {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--text-color);
 }
 
-.App-link {
-  color: #61dafb;
+/* Filter Inputs */
+.filters input[type='date'] {
+  margin-left: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Transactions List */
+.transactions-list {
+  list-style-type: none;
+  padding: 0;
 }
+
+/* Transaction Item */
+.transaction-item {
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Transaction Details */
+.transaction-item div {
+  margin-bottom: 5px;
+}
+
+/* Transaction ID */
+.transaction-id {
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
